@@ -1,0 +1,1131 @@
+﻿<HTML>
+	<HEAD>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+		<META NAME="GENERATOR" CONTENT="Microsoft Visual Studio.NET 7.0">
+		<META NAME="vs_targetSchema" CONTENT="Internet Explorer 5.0">
+		<TITLE>Документ <WC:RES.PRODUCTNAME></WC:RES.PRODUCTNAME> (V<WC:RES.VERSION></WC:RES.VERSION>): Извещение банка</TITLE>
+        <script type="text/javascript" src="AdmScriptStyle/jquery-1.8.3.min.js"></script>
+        <script src="AdmScriptStyle/<br>.0.min.js"></script>
+		<style type="text/css">
+		<!--
+            #container { display: inline-block; }
+                #container > * { display: block; }
+			table {font-size: 12px;font-family: 'Times New Roman';}
+			.capt {font-size: 8px;}
+		-->
+		</style>
+	</HEAD>
+	<BODY>
+		<WC:RS TYPE="FORM" SOURCE="RVOPPSTUDENT" FILTER="(^OWNERDOCSID)" NEWRECORD="TRUE">
+
+ <script type="text/javascript">
+    window.name = "UWS_bank_cheque";
+		$(document).ready(function ()
+
+		{
+        $('#container').empty().qrcode({
+            render: "canvas",
+            ecLevel: "L",
+            minVersion: 6,
+            fill: "#333",
+            background: "#fff",
+            text: 'ST00012|Name=<DB:GET..OWNERSNAME_RU..ASIS></DB:GET..OWNERSNAME_RU..ASIS>|PersonalAcc=<DB:GET..ACCOUNT></DB:GET..ACCOUNT>|BankName=<DB:GET..BANK_RU..WITHOUTQUOT></DB:GET..BANK_RU..WITHOUTQUOT>|BIC=<DB:GET..BIK></DB:GET..BIK>|CorrespAcc=<DB:GET..KORACCOUNT></DB:GET..KORACCOUNT>|Sum=<WC:MATH.MULTIPLY><DB:GET..OPPSUMWDISCOUNT></DB:GET..OPPSUMWDISCOUNT>|100</WC:MATH.MULTIPLY>|Purpose=Оплата за обучение [код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>] по дог. <DB:RS TYPE="SUBFORM" SOURCE="OWNERDOCS" FILTER="(#ORDERID)&(DOCKINDID%168|DOCKINDID%60|DOCKINDID%173|DOCKINDID%181|DOCKINDID%174|DOCKINDID%182|DOCKINDID%177|DOCKINDID%163|DOCKINDID%19|DOCKINDID%164)" ORDERBY="^OWNERDOCSID"><DB:GET..NUMBER></DB:GET..NUMBER></DB:RS> (<DB:SWITCH..DEALERID.NOT.0>ГОРГ</DB:SWITCH..DEALERID.NOT.0><DB:RS TYPE="SUBLIST" SOURCE="CUSTOMER" FILTER="(#CUSTOMERDEALERID)"><DB:GET..SNAME_RU></DB:GET..SNAME_RU></DB:RS>, <DB:GET..FACULTYSNAME_RU></DB:GET..FACULTYSNAME_RU>, <DB:GET..GROUPNAME_RU></DB:GET..GROUPNAME_RU>, <DB:SWITCH..EXECFORMID.NOT.1>ОЧ</DB:SWITCH..EXECFORMID.NOT.1><DB:SWITCH..EXECFORMID.NOT.2>ОЗОЧ</DB:SWITCH..EXECFORMID.NOT.2><DB:SWITCH..EXECFORMID.NOT.3>ЗОЧ</DB:SWITCH..EXECFORMID.NOT.3><DB:SWITCH..EXECFORMID.NOT.4>ЭКС</DB:SWITCH..EXECFORMID.NOT.4>, <DB:GET..NAME_RU></DB:GET..NAME_RU>, <DB:GET..SCHOLASTICPERIODNAME_RU></DB:GET..SCHOLASTICPERIODNAME_RU>)|classNum=<DB:GET..GROUPNAME_RU></DB:GET..GROUPNAME_RU>|PayeeINN=<DB:GET..OWNERINN></DB:GET..OWNERINN>|<DB:RS TYPE="SUBFORM" SOURCE="OWNERDOCS" FILTER="(#ORDERID)&(DOCKINDID%168|DOCKINDID%60|DOCKINDID%173|DOCKINDID%181|DOCKINDID%174|DOCKINDID%182|DOCKINDID%177|DOCKINDID%163|DOCKINDID%19|DOCKINDID%164)" ORDERBY="^OWNERDOCSID" NEWRECORD="TRUE">Contract=<DB:GET..NUMBER></DB:GET..NUMBER>|DocDate=<DB:GET.OWNERDOCS.DATE..FORM></DB:GET.OWNERDOCS.DATE..FORM>|</DB:RS>LastName=<DB:GET..CUSTOMERLASTNAME_RU..WITHOUTQUOT></DB:GET..CUSTOMERLASTNAME_RU..WITHOUTQUOT>|FirstName=<DB:GET..CUSTOMERFIRSTNAME_RU..WITHOUTQUOT></DB:GET..CUSTOMERFIRSTNAME_RU..WITHOUTQUOT>|MiddleName=<DB:GET..CUSTOMERMIDDLENAME_RU..WITHOUTQUOT></DB:GET..CUSTOMERMIDDLENAME_RU..WITHOUTQUOT>|payerAddress=<DB:GET..ZIP></DB:GET..ZIP> <DB:GET..CITY_RU></DB:GET..CITY_RU> <DB:GET..ADDRESS_RU></DB:GET..ADDRESS_RU>|ChildFIO=<DB:GET..LASTNAME_RU></DB:GET..LASTNAME_RU> <DB:GET..FIRSTNAME_RU></DB:GET..FIRSTNAME_RU> <DB:GET..MIDDLENAME_RU></DB:GET..MIDDLENAME_RU>|PaymPeriod=<DB:GET..NAME_RU></DB:GET..NAME_RU> <DB:GET..START..YEAR></DB:GET..START..YEAR>|persAcc=<DB:GET..Number></DB:GET..Number>|CBC=00000000000000000130',
+            size: 200,
+            radius: 0 * 0.01,
+            quiet: 1,
+            mode: 1,
+						label: 'Г Г У',
+  fontname: 'fantacy',
+  fontcolor: '#008B8B'
+        });
+    });
+
+</script>
+			<TABLE BORDER="0" WIDTH="100%" HEIGHT="100%" cellpadding="2" CELLSPACING="0">
+
+				<TR>
+					<TD VALIGN="top">
+					<TABLE BORDER="0" BGCOLOR="#ffffff" CELLPADDING="6" CELLSPACING="0" WIDTH="720px" STYLE="border-collapse:collapse;border:dotted 1px #777777;" HEIGHT="552px">
+						<TBODY>
+
+							<TR VALIGN="top">
+								<TD ALIGN="center" WIDTH="210px" HEIGHT="280px"><div><B>Извещение No <DB:GET..DOCKINDID></DB:GET..DOCKINDID>/<DB:GET..OWNERDOCSNUMBER></DB:GET..OWNERDOCSNUMBER><BR><FONT SIZE="1">(код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>)</FONT></B></div>
+                                <div id="container"></div>
+
+								<TD VALIGN="top">
+
+								<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+									<TR>
+
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD>
+											    <DB:SWITCH..DEALERID.NOT.0>
+								                    <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                </DB:SWITCH..DEALERID.NOT.0>
+								                <DB:SWITCH..DEALERID.EQUAL.0>
+								                    <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                        <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                            <B><DB:GET..NAME_RU></DB:GET..NAME_RU></B>
+								                        </DB:RS>
+								                    </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                    <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                        <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                    </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                </DB:SWITCH..DEALERID.EQUAL.0></TD>
+
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center">(наименование получателя платежа)</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD HEIGHT="15px" VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD VALIGN="top" WIDTH="40%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 4px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center">
+													    <DB:SWITCH..DEALERID.NOT.0>
+									                        <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+									                    </DB:SWITCH..DEALERID.NOT.0>
+									                    <DB:SWITCH..DEALERID.EQUAL.0>
+									                        <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                                    <B><DB:GET..INN></DB:GET..INN>/<DB:GET..KPP></DB:GET..KPP></B>
+								                                </DB:RS>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                            <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                                <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+									                    </DB:SWITCH..DEALERID.EQUAL.0></TD>
+									                </TR>
+												</TABLE></TD>
+												<TD WIDTH="5%">&nbsp;</TD>
+												<TD ALIGN="right" WIDTH="55%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center"><B><DB:GET..ACCOUNT></DB:GET..ACCOUNT></B></TD>
+									                </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center" WIDTH="35%">(ИНН / КПП получателя платежа)</TD>
+												<TD ALIGN="center" WIDTH="10%">&nbsp;</TD>
+												<TD ALIGN="center" WIDTH="55%">(номер счета получателя платежа)</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD HEIGHT="15px" VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD VALIGN="top" WIDTH="67%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD><B><DB:GET..BANK_RU></DB:GET..BANK_RU></B></TD>
+									                </TR>
+												</TABLE></TD>
+												<TD WIDTH="2%">&nbsp;</TD>
+												<TD WIDTH="6%">БИК</TD>
+												<TD ALIGN="right" WIDTH="25%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center"><B><DB:GET..BIK></DB:GET..BIK></B></TD>
+									                </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center" WIDTH="67%">(наименование банка получателя платежа)</TD>
+												<TD WIDTH="33%">&nbsp;</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD HEIGHT="15px" VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="45%"><SPAN STYLE="font-size: 11px;">Номер кор./сч. банка получателя платежа</SPAN></TD>
+												<TD ALIGN="right" WIDTH="55%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center"><B><DB:GET..KORACCOUNT></DB:GET..KORACCOUNT></B></TD>
+									                </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. плательщика</SPAN></TD>
+												<TD WIDTH="78%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B><DB:GET..CUSTOMERNAME_RU></DB:GET..CUSTOMERNAME_RU></B></TD>
+												    </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Адрес плательщика</SPAN></TD>
+												<TD WIDTH="78%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B><DB:GET..ZIP></DB:GET..ZIP> <DB:GET..CITY_RU></DB:GET..CITY_RU> <DB:GET..ADDRESS_RU></DB:GET..ADDRESS_RU></B></TD>
+												    </TR>
+												    </TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. учащегося</SPAN></TD>
+												<TD WIDTH="78%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B><DB:GET..LASTNAME_RU></DB:GET..LASTNAME_RU>
+													    <DB:GET..FIRSTNAME_RU></DB:GET..FIRSTNAME_RU> <DB:GET..MIDDLENAME_RU></DB:GET..MIDDLENAME_RU> </B></TD>
+												    </TR>
+												    </TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD VALIGN="top">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B>Оплата за обучение [код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>] по дог. <DB:RS TYPE="SUBLIST" SOURCE="OWNERDOCS" FILTER="(#ORDERID)&(DOCKINDID%168|DOCKINDID%60|DOCKINDID%173|DOCKINDID%181|DOCKINDID%174|DOCKINDID%182|DOCKINDID%177|DOCKINDID%163|DOCKINDID%19|DOCKINDID%164)" ORDERBY="^OWNERDOCSID"><DB:GET..NUMBER></DB:GET..NUMBER></DB:RS>
+													    (<DB:SWITCH..DEALERID.NOT.0>ГОРГ</DB:SWITCH..DEALERID.NOT.0><DB:RS TYPE="SUBLIST" SOURCE="CUSTOMER" FILTER="(#CUSTOMERDEALERID)"><DB:GET..SNAME_RU></DB:GET..SNAME_RU></DB:RS>, <DB:GET..FACULTYSNAME_RU></DB:GET..FACULTYSNAME_RU>, <DB:GET..GROUPNAME_RU></DB:GET..GROUPNAME_RU>,
+													    <DB:SWITCH..EXECFORMID.NOT.1>ОЧ</DB:SWITCH..EXECFORMID.NOT.1><DB:SWITCH..EXECFORMID.NOT.2>ОЗОЧ</DB:SWITCH..EXECFORMID.NOT.2><DB:SWITCH..EXECFORMID.NOT.3>ЗОЧ</DB:SWITCH..EXECFORMID.NOT.3><DB:SWITCH..EXECFORMID.NOT.4>ЭКС</DB:SWITCH..EXECFORMID.NOT.4>,
+													    <DB:GET..NAME_RU></DB:GET..NAME_RU>, <DB:GET..SCHOLASTICPERIODNAME_RU></DB:GET..SCHOLASTICPERIODNAME_RU>)</B></TD>
+												    </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center">(наименование платежа)</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="18%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платежа</SPAN></TD>
+												<TD WIDTH="24%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												    <TR>
+													    <TD ALIGN="center"><B><DB:GET..OPPSUMWDISCOUNT></DB:GET..OPPSUMWDISCOUNT></B></TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												<TD WIDTH="24%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платы за услуги</SPAN></TD>
+												<TD WIDTH="20%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="6%" ALIGN="right" VALIGN="bottom">руб.</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="10%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Итого</SPAN></TD>
+												<TD WIDTH="32%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												<TD WIDTH="4%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">«</SPAN></TD>
+												<TD WIDTH="10%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												    <TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="4%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">»</SPAN></TD>
+												<TD WIDTH="20%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="12%" ALIGN="right" VALIGN="bottom">20____ г.</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD CLASS="capt">С условиями приема указанной в платежном документе суммы, в т.ч. с суммой взимаемой платы за услуги банка, ознакомлен(а) и согласен(на).</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="40%">&nbsp;</TD>
+												<TD WIDTH="25%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">Подпись плательщика</SPAN></TD>
+												<TD WIDTH="35%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												    <TR>
+													    <TD>&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+								</TABLE></TD>
+							</TR>
+                            <TR VALIGN="top">
+								<TD STYLE="border-top:dotted 1px #777777;" ALIGN="center" WIDTH="163px" HEIGHT="280px"><B>Извещение No <DB:GET..DOCKINDID></DB:GET..DOCKINDID>/<DB:GET..NUMBER></DB:GET..NUMBER><BR><FONT SIZE="1">(код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>)</FONT></B></TD>
+								<TD STYLE="border-top:dotted 1px #777777;" VALIGN="top">
+								<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD>
+											    <DB:SWITCH..DEALERID.NOT.0>
+								                    <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                </DB:SWITCH..DEALERID.NOT.0>
+								                <DB:SWITCH..DEALERID.EQUAL.0>
+								                    <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                        <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                            <B><DB:GET..NAME_RU></DB:GET..NAME_RU></B>
+								                        </DB:RS>
+								                    </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                    <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                        <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                    </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                </DB:SWITCH..DEALERID.EQUAL.0></TD>
+
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center">(наименование получателя платежа)</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD HEIGHT="15px" VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD VALIGN="top" WIDTH="40%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 4px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center">
+													    <DB:SWITCH..DEALERID.NOT.0>
+									                        <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+									                    </DB:SWITCH..DEALERID.NOT.0>
+									                    <DB:SWITCH..DEALERID.EQUAL.0>
+									                        <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                                    <B><DB:GET.CUSTOMER.INN></DB:GET.CUSTOMER.INN>/<DB:GET.CUSTOMER.KPP></DB:GET.CUSTOMER.KPP></B>
+								                                </DB:RS>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                            <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                                <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+									                    </DB:SWITCH..DEALERID.EQUAL.0></TD>
+									                </TR>
+												</TABLE></TD>
+												<TD WIDTH="5%">&nbsp;</TD>
+												<TD ALIGN="right" WIDTH="55%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center"><B><DB:GET..ACCOUNT></DB:GET..ACCOUNT></B></TD>
+									                </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center" WIDTH="35%">(ИНН / КПП получателя платежа)</TD>
+												<TD ALIGN="center" WIDTH="10%">&nbsp;</TD>
+												<TD ALIGN="center" WIDTH="55%">(номер счета получателя платежа)</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD HEIGHT="15px" VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD VALIGN="top" WIDTH="67%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD><B><DB:GET..BANK_RU></DB:GET..BANK_RU></B></TD>
+									                </TR>
+												</TABLE></TD>
+												<TD WIDTH="2%">&nbsp;</TD>
+												<TD WIDTH="6%">БИК</TD>
+												<TD ALIGN="right" WIDTH="25%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center"><B><DB:GET..BIK></DB:GET..BIK></B></TD>
+									                </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center" WIDTH="67%">(наименование банка получателя платежа)</TD>
+												<TD WIDTH="33%">&nbsp;</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD HEIGHT="15px" VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="45%"><SPAN STYLE="font-size: 11px;">Номер кор./сч. банка получателя платежа</SPAN></TD>
+												<TD ALIGN="right" WIDTH="55%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="center"><B><DB:GET..KORACCOUNT></DB:GET..KORACCOUNT></B></TD>
+									                </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. плательщика</SPAN></TD>
+												<TD WIDTH="78%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B><DB:GET..CUSTOMERNAME_RU></DB:GET..CUSTOMERNAME_RU></B></TD>
+												    </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Адрес плательщика</SPAN></TD>
+												<TD WIDTH="78%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B><DB:GET..ZIP></DB:GET..ZIP> <DB:GET..CITY_RU></DB:GET..CITY_RU> <DB:GET..ADDRESS_RU></DB:GET..ADDRESS_RU></B></TD>
+												    </TR>
+												    </TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. учащегося</SPAN></TD>
+												<TD WIDTH="78%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B><DB:GET..LASTNAME_RU></DB:GET..LASTNAME_RU>
+													    <DB:GET..FIRSTNAME_RU></DB:GET..FIRSTNAME_RU> <DB:GET..MIDDLENAME_RU></DB:GET..MIDDLENAME_RU> </B></TD>
+												    </TR>
+												    </TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD VALIGN="top">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD VALIGN="bottom"><B>Оплата за обучение [код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>] по дог. <DB:RS TYPE="SUBLIST" SOURCE="OWNERDOCS" FILTER="(#ORDERID)&(DOCKINDID%168|DOCKINDID%60|DOCKINDID%173|DOCKINDID%181|DOCKINDID%174|DOCKINDID%182|DOCKINDID%177|DOCKINDID%163|DOCKINDID%19|DOCKINDID%164)" ORDERBY="^OWNERDOCSID"><DB:GET..NUMBER></DB:GET..NUMBER></DB:RS>
+													    (<DB:SWITCH..DEALERID.NOT.0>ГОРГ</DB:SWITCH..DEALERID.NOT.0><DB:RS TYPE="SUBLIST" SOURCE="CUSTOMER" FILTER="(#CUSTOMERDEALERID)"><DB:GET..SNAME_RU></DB:GET..SNAME_RU></DB:RS>, <DB:GET..FACULTYSNAME_RU></DB:GET..FACULTYSNAME_RU>, <DB:GET..GROUPNAME_RU></DB:GET..GROUPNAME_RU>,
+													    <DB:SWITCH..EXECFORMID.NOT.1>ОЧ</DB:SWITCH..EXECFORMID.NOT.1><DB:SWITCH..EXECFORMID.NOT.2>ОЗОЧ</DB:SWITCH..EXECFORMID.NOT.2><DB:SWITCH..EXECFORMID.NOT.3>ЗОЧ</DB:SWITCH..EXECFORMID.NOT.3><DB:SWITCH..EXECFORMID.NOT.4>ЭКС</DB:SWITCH..EXECFORMID.NOT.4>,
+													    <DB:GET..NAME_RU></DB:GET..NAME_RU>, <DB:GET..SCHOLASTICPERIODNAME_RU></DB:GET..SCHOLASTICPERIODNAME_RU>)</B></TD>
+												    </TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="top">
+										<TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD ALIGN="center">(наименование платежа)</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="18%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платежа</SPAN></TD>
+												<TD WIDTH="24%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												    <TR>
+													    <TD ALIGN="center"><B><DB:GET..OPPSUMWDISCOUNT></DB:GET..OPPSUMWDISCOUNT></B></TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												<TD WIDTH="24%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платы за услуги</SPAN></TD>
+												<TD WIDTH="20%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="6%" ALIGN="right" VALIGN="bottom">руб.</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="10%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Итого</SPAN></TD>
+												<TD WIDTH="32%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												<TD WIDTH="4%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">«</SPAN></TD>
+												<TD WIDTH="10%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												    <TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="4%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">»</SPAN></TD>
+												<TD WIDTH="20%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													<TR>
+													    <TD ALIGN="right">&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+												<TD WIDTH="12%" ALIGN="right" VALIGN="bottom">20____ г.</TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+									<TR>
+										<TD CLASS="capt">С условиями приема указанной в платежном документе суммы, в т.ч. с суммой взимаемой платы за услуги банка, ознакомлен(а) и согласен(на).</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="bottom">
+										<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											<TR>
+												<TD WIDTH="40%">&nbsp;</TD>
+												<TD WIDTH="25%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">Подпись плательщика</SPAN></TD>
+												<TD WIDTH="35%">
+												<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												    <TR>
+													    <TD>&nbsp;</TD>
+													</TR>
+												</TABLE></TD>
+											</TR>
+										</TABLE></TD>
+									</TR>
+								</TABLE></TD>
+							</TR>
+						</TBODY>
+					</TABLE>
+					<DB:SWITCH..FINESUMMA.EQUAL.0>
+					    <DIV STYLE="page-break-before:always;">
+					        <TABLE BORDER="0" BGCOLOR="#ffffff" CELLPADDING="6" CELLSPACING="0" WIDTH="720px" STYLE="border-collapse:collapse;border:dotted 1px #777777;" HEIGHT="552px">
+						        <TBODY>
+							        <TR VALIGN="top">
+								        <TD ALIGN="center" WIDTH="163px" HEIGHT="280px"><B>Извещение No <DB:GET..DOCKINDID></DB:GET..DOCKINDID>/<DB:GET..NUMBER></DB:GET..NUMBER><BR><FONT SIZE="1">(код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>)</FONT></B></TD>
+								        <TD VALIGN="top">
+								        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD>
+											            <DB:SWITCH..DEALERID.NOT.0>
+								                            <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                        </DB:SWITCH..DEALERID.NOT.0>
+								                        <DB:SWITCH..DEALERID.EQUAL.0>
+								                            <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                                    <B><DB:GET..NAME_RU></DB:GET..NAME_RU></B>
+								                                </DB:RS>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                            <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                                <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                        </DB:SWITCH..DEALERID.EQUAL.0></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center">(наименование получателя платежа)</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD HEIGHT="15px" VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD VALIGN="top" WIDTH="40%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 4px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center">
+													            <DB:SWITCH..DEALERID.NOT.0>
+									                                <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+									                            </DB:SWITCH..DEALERID.NOT.0>
+									                            <DB:SWITCH..DEALERID.EQUAL.0>
+									                                <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                        <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                                            <B><DB:GET..INN></DB:GET..INN>/<DB:GET..KPP></DB:GET..KPP></B>
+								                                        </DB:RS>
+								                                    </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                    <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                                        <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+								                                    </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+									                            </DB:SWITCH..DEALERID.EQUAL.0></TD>
+									                        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="5%">&nbsp;</TD>
+												        <TD ALIGN="right" WIDTH="55%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center"><B><DB:GET..ACCOUNT></DB:GET..ACCOUNT></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center" WIDTH="35%">(ИНН / КПП получателя платежа)</TD>
+												        <TD ALIGN="center" WIDTH="10%">&nbsp;</TD>
+												        <TD ALIGN="center" WIDTH="55%">(номер счета получателя платежа)</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD HEIGHT="15px" VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD VALIGN="top" WIDTH="67%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD><B><DB:GET..BANK_RU></DB:GET..BANK_RU></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="2%">&nbsp;</TD>
+												        <TD WIDTH="6%">БИК</TD>
+												        <TD ALIGN="right" WIDTH="25%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center"><B><DB:GET..BIK></DB:GET..BIK></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center" WIDTH="67%">(наименование банка получателя платежа)</TD>
+												        <TD WIDTH="33%">&nbsp;</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD HEIGHT="15px" VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="45%"><SPAN STYLE="font-size: 11px;">Номер кор./сч. банка получателя платежа</SPAN></TD>
+												        <TD ALIGN="right" WIDTH="55%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center"><B><DB:GET..KORACCOUNT></DB:GET..KORACCOUNT></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. плательщика</SPAN></TD>
+												        <TD WIDTH="78%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B><DB:GET..CUSTOMERNAME_RU></DB:GET..CUSTOMERNAME_RU></B></TD>
+												            </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Адрес плательщика</SPAN></TD>
+												        <TD WIDTH="78%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B><DB:GET..ZIP></DB:GET..ZIP> <DB:GET..CITY_RU></DB:GET..CITY_RU> <DB:GET..ADDRESS_RU></DB:GET..ADDRESS_RU></B></TD>
+												            </TR>
+												            </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. учащегося</SPAN></TD>
+												        <TD WIDTH="78%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B><DB:GET..LASTNAME_RU></DB:GET..LASTNAME_RU>
+													            <DB:GET..FIRSTNAME_RU></DB:GET..FIRSTNAME_RU> <DB:GET..MIDDLENAME_RU></DB:GET..MIDDLENAME_RU> </B></TD>
+												            </TR>
+												            </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD VALIGN="top">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B>Пени за проспрочку платежа [код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>] по заказу <DB:GET..NUMBER></DB:GET..NUMBER> <DB:SWITCH..DEALERID.NOT.0>(ГОРГ)</DB:SWITCH..DEALERID.NOT.0><DB:RS TYPE="SUBLIST" SOURCE="CUSTOMER" FILTER="(#CUSTOMERDEALERID)">(<DB:GET.CUSTOMER.SNAME_RU></DB:GET.CUSTOMER.SNAME_RU>)</DB:RS> от <DB:GET..CREATEDDATE..SHORT></DB:GET..CREATEDDATE..SHORT>
+														            (код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>) (<DB:GET..NAME_RU></DB:GET..NAME_RU> - <DB:GET..FINISH..SHORT></DB:GET..FINISH..SHORT>)</B></TD>
+												            </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center">(наименование платежа)</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="18%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платежа</SPAN></TD>
+												        <TD WIDTH="24%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												            <TR>
+													            <TD ALIGN="center"><B><DB:GET..RESTFINESUMMA..OWNER></DB:GET..RESTFINESUMMA..OWNER></B></TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												        <TD WIDTH="24%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платы за услуги</SPAN></TD>
+												        <TD WIDTH="20%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="6%" ALIGN="right" VALIGN="bottom">руб.</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="10%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Итого</SPAN></TD>
+												        <TD WIDTH="32%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												        <TD WIDTH="4%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">«</SPAN></TD>
+												        <TD WIDTH="10%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												            <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="4%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">»</SPAN></TD>
+												        <TD WIDTH="20%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="12%" ALIGN="right" VALIGN="bottom">20____ г.</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD CLASS="capt">С условиями приема указанной в платежном документе суммы, в т.ч. с суммой взимаемой платы за услуги банка, ознакомлен(а) и согласен(на).</TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="40%">&nbsp;</TD>
+												        <TD WIDTH="25%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">Подпись плательщика</SPAN></TD>
+												        <TD WIDTH="35%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												            <TR>
+													            <TD>&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+								        </TABLE></TD>
+							        </TR>
+                                    <TR VALIGN="top">
+								        <TD STYLE="border-top:dotted 1px #777777;" ALIGN="center" WIDTH="163px" HEIGHT="280px"><B>Извещение No <DB:GET..DOCKINDID></DB:GET..DOCKINDID>/<DB:GET..NUMBER></DB:GET..NUMBER><BR><FONT SIZE="1">(код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>)</FONT></B></TD>
+								        <TD STYLE="border-top:dotted 1px #777777;" VALIGN="top">
+								        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD>
+											            <DB:SWITCH..DEALERID.NOT.0>
+								                            <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                        </DB:SWITCH..DEALERID.NOT.0>
+								                        <DB:SWITCH..DEALERID.EQUAL.0>
+								                            <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                                    <B><DB:GET..NAME_RU></DB:GET..NAME_RU></B>
+								                                </DB:RS>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                            <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                                <B><DB:GET..OWNERSNAME_RU></DB:GET..OWNERSNAME_RU></B>
+								                            </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                        </DB:SWITCH..DEALERID.EQUAL.0></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center">(наименование получателя платежа)</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD HEIGHT="15px" VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD VALIGN="top" WIDTH="40%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 4px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center">
+													            <DB:SWITCH..DEALERID.NOT.0>
+									                                <B><DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></DB:GET..OWNERINN></B>
+									                            </DB:SWITCH..DEALERID.NOT.0>
+									                            <DB:SWITCH..DEALERID.EQUAL.0>
+									                                <DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                        <DB:RS TYPE="SUBFORM" SOURCE="CUSTOMER"  FILTER="(~CUSTOMERDEALERID)">
+								                                            <B><DB:GET..INN></DB:GET..INN>/<DB:GET..KPP></DB:GET..KPP></B>
+								                                        </DB:RS>
+								                                    </DB:SWITCH..ISDEALERHEAD.EQUAL.FALSE>
+								                                    <DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+								                                        <B><DB:GET..OWNERINN></DB:GET..OWNERINN>/<DB:GET..OWNERKPP></DB:GET..OWNERKPP></B>
+								                                    </DB:SWITCH..ISDEALERHEAD.EQUAL.TRUE>
+									                            </DB:SWITCH..DEALERID.EQUAL.0></TD>
+									                        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="5%">&nbsp;</TD>
+												        <TD ALIGN="right" WIDTH="55%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center"><B><DB:GET..ACCOUNT></DB:GET..ACCOUNT></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center" WIDTH="35%">(ИНН / КПП получателя платежа)</TD>
+												        <TD ALIGN="center" WIDTH="10%">&nbsp;</TD>
+												        <TD ALIGN="center" WIDTH="55%">(номер счета получателя платежа)</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD HEIGHT="15px" VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD VALIGN="top" WIDTH="67%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD><B><DB:GET..BANK_RU></DB:GET..BANK_RU></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="2%">&nbsp;</TD>
+												        <TD WIDTH="6%">БИК</TD>
+												        <TD ALIGN="right" WIDTH="25%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center"><B><DB:GET..BIK></DB:GET..BIK></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center" WIDTH="67%">(наименование банка получателя платежа)</TD>
+												        <TD WIDTH="33%">&nbsp;</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD HEIGHT="15px" VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="45%"><SPAN STYLE="font-size: 11px;">Номер кор./сч. банка получателя платежа</SPAN></TD>
+												        <TD ALIGN="right" WIDTH="55%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border:#333333 1px solid;letter-spacing: 5px;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="center"><B><DB:GET..KORACCOUNT></DB:GET..KORACCOUNT></B></TD>
+									                        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. плательщика</SPAN></TD>
+												        <TD WIDTH="78%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B><DB:GET..CUSTOMERNAME_RU></DB:GET..CUSTOMERNAME_RU></B></TD>
+												            </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Адрес плательщика</SPAN></TD>
+												        <TD WIDTH="78%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B><DB:GET..ZIP></DB:GET..ZIP> <DB:GET..CITY_RU></DB:GET..CITY_RU> <DB:GET..ADDRESS_RU></DB:GET..ADDRESS_RU></B></TD>
+												            </TR>
+												            </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="22%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Ф.И.О. учащегося</SPAN></TD>
+												        <TD WIDTH="78%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B><DB:GET..LASTNAME_RU></DB:GET..LASTNAME_RU>
+													            <DB:GET..FIRSTNAME_RU></DB:GET..FIRSTNAME_RU> <DB:GET..MIDDLENAME_RU></DB:GET..MIDDLENAME_RU> </B></TD>
+												            </TR>
+												            </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD VALIGN="top">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD VALIGN="bottom"><B>Пени за проспрочку платежа [код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>] по заказу <DB:GET..NUMBER></DB:GET..NUMBER> <DB:SWITCH..DEALERID.NOT.0>(ГОРГ)</DB:SWITCH..DEALERID.NOT.0><DB:RS TYPE="SUBLIST" SOURCE="CUSTOMER" FILTER="(#CUSTOMERDEALERID)">(<DB:GET..SNAME_RU></DB:GET..SNAME_RU>)</DB:RS> от <DB:GET..CREATEDDATE..SHORT></DB:GET..CREATEDDATE..SHORT>
+														            (код <DB:GET..OWNERDOCSID></DB:GET..OWNERDOCSID>) (<DB:GET..NAME_RU></DB:GET..NAME_RU> - <DB:GET..FINISH..SHORT></DB:GET..FINISH..SHORT>)</B></TD>
+												            </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="top">
+										        <TABLE BORDER="0" CELLPADDING="0" CLASS="capt" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD ALIGN="center">(наименование платежа)</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="18%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платежа</SPAN></TD>
+												        <TD WIDTH="24%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												            <TR>
+													            <TD ALIGN="center"><B><DB:GET..RESTFINESUMMA..OWNER></DB:GET..RESTFINESUMMA..OWNER></B></TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												        <TD WIDTH="24%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Сумма платы за услуги</SPAN></TD>
+												        <TD WIDTH="20%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="6%" ALIGN="right" VALIGN="bottom">руб.</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="10%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">Итого</SPAN></TD>
+												        <TD WIDTH="32%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="8%" VALIGN="bottom">&nbsp;руб.</TD>
+												        <TD WIDTH="4%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">«</SPAN></TD>
+												        <TD WIDTH="10%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												            <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="4%" VALIGN="bottom"><SPAN STYLE="font-size: 11px;">»</SPAN></TD>
+												        <TD WIDTH="20%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+													        <TR>
+													            <TD ALIGN="right">&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+												        <TD WIDTH="12%" ALIGN="right" VALIGN="bottom">20____ г.</TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+									        <TR>
+										        <TD CLASS="capt">С условиями приема указанной в платежном документе суммы, в т.ч. с суммой взимаемой платы за услуги банка, ознакомлен(а) и согласен(на).</TD>
+									        </TR>
+									        <TR>
+										        <TD VALIGN="bottom">
+										        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+											        <TR>
+												        <TD WIDTH="40%">&nbsp;</TD>
+												        <TD WIDTH="25%" VALIGN="bottom" ALIGN="right"><SPAN STYLE="font-size: 11px;">Подпись плательщика</SPAN></TD>
+												        <TD WIDTH="35%">
+												        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="border-bottom:#333333 1px solid;" WIDTH="100%" HEIGHT="100%">
+												            <TR>
+													            <TD>&nbsp;</TD>
+													        </TR>
+												        </TABLE></TD>
+											        </TR>
+										        </TABLE></TD>
+									        </TR>
+								        </TABLE></TD>
+							        </TR>
+						        </TBODY>
+					        </TABLE>
+					    </DIV>
+					</DB:SWITCH..FINESUMMA.EQUAL.0>
+					<TABLE BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="680px">
+						<TR VALIGN="top">
+							<TD><B>Дальнейшие действия с документом:</B>
+							<OL>
+								<LI>Перед печатью бланка установите значения параметров страницы "Поля слева" и "Поля справа" равные 10.</LI>
+								<LI>Распечатайте бланк (необходимо, чтобы Ваш
+									компьютер был подключен к принтеру).<BR>
+									Для этого выберите в меню <B>Файл</B> (File) строку <B>Печать</B> (Print).</LI>
+								<LI>Вырежьте бланк по внешним линиям.</LI>
+								<LI>Заполните все незаполненные поля и подпишите бланк.</LI>
+								<LI>Вручите бланк оператору и оплатите счет в банке.</LI>
+                                <li>При наличии QR-кода на данном бланке можете произвести платеж через банкомат, оборудованный считывающим устройством, приложив QR-код к этому устройству.</li>
+								<LI>Для подтверждения оплаты отправьте отсканированную копию или фотографию квитанции с отметкой банка на e-mail <DB:GET..OWNEREMAIL></DB:GET..OWNEREMAIL>.</LI>
+							</OL></TD>
+						</TR>
+					</TABLE></TD>
+				</TR>
+
+
+
+
+		</WC:RS>
+
+	</body>
+</html>
